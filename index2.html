@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM EVENT</title>
+</head>
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <h2 id="change-status"></h2>
+    <button onclick="handelOnClick()">Event Handlers by add onclick function</button>
+    <p id="user-input">Defult Input</p>
+    <input id="input-fild" type="text">
+    <button id="btn-update">Update</button>
+    <script src="js/event2.js"></script>
+    <script>
+        function handelOnClick(){
+            const changeStatus = document.getElementById('change-status');
+            changeStatus.innerText = '(Changed Text) I go Home';
+        }
+
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputData =document.getElementById('input-fild');
+            const inputText = inputData.value;
+
+            const p = document.getElementById('user-input');
+            p.innerText = inputText;
+            inputData.value = ''; // ei line diye input box er likha null kora hoce. Without ei line , je likha input deoya hobe oi likha input box e show korbe
+        })
+    </script>
+</body>
+</html>

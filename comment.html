@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="comment-container"> 
+        <h1>Please Enter Your Comment</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nulla, voluptatem in exercitationem adipisci reiciendis amet nobis quos expedita sapiente asperiores deserunt facilis, veniam quod. Tempora adipisci est nihil eveniet doloribus reprehenderit maiores quas dolores odio repudiandae magnam, eius ipsa, laborum sunt aut! Nostrum voluptates laborum laboriosam sunt quam porro consequuntur earum similique. Blanditiis excepturi incidunt quos dolorum nisi eveniet fugiat, libero, quisquam, harum inventore deleniti sint optio iste eos sequi culpa cupiditate praesentium! Quia omnis iste magni excepturi aspernatur dolorum assumenda corporis amet temporibus suscipit labore laudantium nobis dicta, voluptate numquam praesentium enim facilis debitis nulla ipsum ducimus eos. Modi, reprehenderit asperiores perspiciatis tempora sequi numquam ipsum molestiae, nam facere neque maiores corporis eveniet optio laboriosam necessitatibus debitis veniam deserunt consectetur dolore cumque omnis similique obcaecati sunt impedit! Incidunt itaque dolorum alias eaque velit placeat illum totam reiciendis quo nam natus perspiciatis molestias in, dicta, ut officia. Accusamus, velit.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nulla, voluptatem in exercitationem adipisci reiciendis amet nobis quos expedita sapiente asperiores deserunt facilis, veniam quod. Tempora adipisci est nihil eveniet doloribus reprehenderit maiores quas dolores odio repudiandae magnam, eius ipsa, laborum sunt aut! Nostrum voluptates laborum laboriosam sunt quam porro consequuntur earum similique. Blanditiis excepturi incidunt quos dolorum nisi eveniet fugiat, libero, quisquam, harum inventore deleniti sint optio iste eos sequi culpa cupiditate praesentium! Quia omnis iste magni excepturi aspernatur dolorum assumenda corporis amet temporibus suscipit labore laudantium nobis dicta, voluptate numquam praesentium enim facilis debitis nulla ipsum ducimus eos. Modi, reprehenderit asperiores perspiciatis tempora sequi numquam ipsum molestiae, nam facere neque maiores corporis eveniet optio laboriosam necessitatibus debitis veniam deserunt consectetur dolore cumque omnis similique obcaecati sunt impedit! Incidunt itaque dolorum alias eaque velit placeat illum totam reiciendis quo nam natus perspiciatis molestias in, dicta, ut officia. Accusamus, velit.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nulla, voluptatem in exercitationem adipisci reiciendis amet nobis quos expedita sapiente asperiores deserunt facilis, veniam quod. Tempora adipisci est nihil eveniet doloribus reprehenderit maiores quas dolores odio repudiandae magnam, eius ipsa, laborum sunt aut! Nostrum voluptates laborum laboriosam sunt quam porro consequuntur earum similique. Blanditiis excepturi incidunt quos dolorum nisi eveniet fugiat, libero, quisquam, harum inventore deleniti sint optio iste eos sequi culpa cupiditate praesentium! Quia omnis iste magni excepturi aspernatur dolorum assumenda corporis amet temporibus suscipit labore laudantium nobis dicta, voluptate numquam praesentium enim facilis debitis nulla ipsum ducimus eos. Modi, reprehenderit asperiores perspiciatis tempora sequi numquam ipsum molestiae, nam facere neque maiores corporis eveniet optio laboriosam necessitatibus debitis veniam deserunt consectetur dolore cumque omnis similique obcaecati sunt impedit! Incidunt itaque dolorum alias eaque velit placeat illum totam reiciendis quo nam natus perspiciatis molestias in, dicta, ut officia. Accusamus, velit.</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+    </div>
+    <script src="js/comment.js"></script>
+    <script>
+        document.getElementById('btn-post').addEventListener('click', function(){
+            const commentBox = document.getElementById('new-comment');
+            const newComment = commentBox.value;
+
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p);
+            commentBox.value ='';
+        })
+    </script>
+</body>
+</html>
